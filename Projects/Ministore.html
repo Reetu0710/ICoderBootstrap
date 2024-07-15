@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ministore Templates</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        img{
+            width: 100%;
+        }
+        .navbar-nav li {
+            padding: 1rem;
+
+        }
+
+        .carousel-inner img {
+            height: 400px;
+            width: 500px;
+        }
+
+        #billboard .bannerSection {
+            background-color: #edf1f3;
+        }
+
+        .card {
+            display: flex;
+            justify-content: space-around;
+            margin: 6px 6px;
+
+        }
+       
+
+        .mobile {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .btn-right {
+            display: block;
+            text-align: right;
+        }
+
+        .btn.btn-normal {
+            text-decoration: underline;
+            border: none;
+        }
+
+        .btn.btn-medium {
+            padding: 0.8em 2.8em;
+            font-size: 1.1em;
+            letter-spacing: 2px;
+        }
+
+        .card .over {
+            position: absolute;
+            background-color: rgb(82, 73, 73);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            top: 60%;
+            left: 16%;
+            opacity: 0;
+            border-radius: 5px;
+            transition: all 0.3s linear 0;
+        }
+
+        .card:hover .over {
+            opacity: 1;
+            background-color: rgb(59, 48, 48);
+        }
+
+        .card:hover .over:hover {
+            background-color: lightblue;
+        }
+
+
+        .card .over span {
+            color: white;
+            font-size: 1.2rem;
+
+        }
+
+        .icon svg {
+            color: white;
+        }
+
+        .over {
+            padding: 1px 14px;
+        }
+
+        .icon {
+            padding: 0px 6px;
+        }
+
+        .image {
+            text-align: center;
+            vertical-align: middle;
+            height: 289px;
+
+        }
+
+       
+        
+        .sale img{
+            position: absolute;
+            top: -1%;
+            left: 38%;
+            z-index: 999;
+            width: 62%;
+           
+        }
+
+        
+        .padding-medium {
+            padding-top: 4em;
+            padding-bottom: 4em;
+        } 
+        #billboard{
+            padding: 20px 2px;
+        }
+        .h3.card-title{
+            font-size: 1rem;
+        }
+        .card-title{
+            margin-bottom: 0.5rem;
+        }
+        a {
+       color: black;
+       text-decoration: none;
+       transition: 0.3s color ease-out;
+       }
+       #latestPost.image img{
+        width: 100%;
+       }
+       #watches .image img{
+        height: 100%;
+       }
+       #mobile .image img{
+        height: 100%;
+       }
+       
+       
+       
+    </style>
+</head>
+<body>
+    <div class="container-fluid ">
+        <div class="store">
+            <nav class="navbar navbar-expand-lg bg-body-tertiary">
+                <div class="container-fluid p-4">
+                    <div class="col-lg-3 col-12">
+                        <img src="./assets/images/main-logo.png" alt="">
+
+                    </div>
+                    <div class="col-lg-7 col-12   ">
+                        <div class="collapse navbar-collapse " id="navbarSupportedContent">
+                            <ul class="navbar-nav  ">
+                                <li class="nav-item">
+                                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link active" href="#">Sevices</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link active" href="#">Product</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link active" href="#">Watches</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link active" href="#">Sale</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link active" href="#">Blog</a>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Pages </a>
+
+                                </li>
+
+                            </ul>
+
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-12 d-flex justify-content-end">
+
+                        <div class="user-item">
+                            <ul class="d-flex justify-content-start list-unstyled">
+                                <li class="search-item pe-3">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                                        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"></path>
+                                    </svg>
+
+                                </li>
+                                <li class="pe-3">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+                                        <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"></path>
+                                        <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"></path>
+                                    </svg>
+                                </li>
+                                <li class="pe-3">
+
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart-fill" viewBox="0 0 16 16">
+                                        <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"></path>
+                                    </svg>
+
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+
+        </div>
+    </div>
+    <section id="billboard" class="position-relative overflow-hidden bg-light-blue">
+        <div class="container-fluid bannerSection">
+            <div class="container">
+                <div id="carouselExample" class="carousel slide">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="row d-flex align-items-center">
+                                <div class="col-md-6">
+                                    <div class="banner-content">
+                                        <h1 class="display-2 text-uppercase text-dark pb-5">Your Product are Great</h1>
+                                        <a href="#" class="btn btn-median btn-dark text-uppercase btn-rounded-none">Shop
+                                            Product</a>
+                                    </div>
+                                </div>
+                                <div class="col-md-5">
+                                    <div class="image-holder">
+                                        <img src="./assets/images/banner-image.png" class="img-fluid" style="float: right;">
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="row d-flex align-items-center">
+                                <div class="col-md-6">
+                                    <div class="banner-content">
+                                        <h1 class="display-2 text-uppercase text-dark pb-5">New Products here</h1>
+                                        <a href="#" class="btn btn-median btn-dark text-uppercase btn-rounded-none">Shop
+                                            Product</a>
+                                    </div>
+                                </div>
+                                <div class="col-md-5">
+                                    <div class="image-holder">
+                                        <img src="./assets/images/banner-image.png" class="img-fluid" style="float: right;">
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+
+
+    <div class="container d-flex justify-content-center align-center p-4">
+        <div class="card border-0">
+            <div class="card-body">
+                <ul class="d-flex justify-content-start list-unstyled">
+                    <li class="search-item pe-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart2" viewBox="0 0 16 16">
+                            <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5M3.14 5l1.25 5h8.22l1.25-5zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2m-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0m9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2m-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0"></path>
+                        </svg>
+                    </li>
+                    <li class="para">
+                        <p><b>FREE DELIVERY </b></p>
+                        <p> Consectetur adipi elit lorem ipsum dolor sit amet.</p>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+        <div class="card border-0">
+            <div class="card-body">
+                <ul class="d-flex justify-content-start list-unstyled">
+                    <li class="search-item pe-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-flower2" viewBox="0 0 16 16">
+                            <path d="M8 16a4 4 0 0 0 4-4 4 4 0 0 0 0-8 4 4 0 0 0-8 0 4 4 0 1 0 0 8 4 4 0 0 0 4 4m3-12q0 .11-.03.247c-.544.241-1.091.638-1.598 1.084A3 3 0 0 0 8 5c-.494 0-.96.12-1.372.331-.507-.446-1.054-.843-1.597-1.084A1 1 0 0 1 5 4a3 3 0 0 1 6 0m-.812 6.052A3 3 0 0 0 11 8a3 3 0 0 0-.812-2.052c.215-.18.432-.346.647-.487C11.34 5.131 11.732 5 12 5a3 3 0 1 1 0 6c-.268 0-.66-.13-1.165-.461a7 7 0 0 1-.647-.487m-3.56.617a3 3 0 0 0 2.744 0c.507.446 1.054.842 1.598 1.084q.03.137.03.247a3 3 0 1 1-6 0q0-.11.03-.247c.544-.242 1.091-.638 1.598-1.084m-.816-4.721A3 3 0 0 0 5 8c0 .794.308 1.516.812 2.052a7 7 0 0 1-.647.487C4.66 10.869 4.268 11 4 11a3 3 0 0 1 0-6c.268 0 .66.13 1.165.461.215.141.432.306.647.487M8 9a1 1 0 1 1 0-2 1 1 0 0 1 0 2"></path>
+                        </svg>
+
+                    </li>
+                    <li class="para">
+                        <p><b>QUALITY GUARANTEE </b></p>
+                        <p> Dolor sit amet orem ipsu mcons ectetur adipi elit.</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="card border-0">
+            <div class="card-body ">
+                <ul class="d-flex justify-content-start list-unstyled">
+                    <li class="search-item pe-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-tag" viewBox="0 0 16 16">
+                            <path d="M6 4.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0m-1 0a.5.5 0 1 0-1 0 .5.5 0 0 0 1 0"></path>
+                            <path d="M2 1h4.586a1 1 0 0 1 .707.293l7 7a1 1 0 0 1 0 1.414l-4.586 4.586a1 1 0 0 1-1.414 0l-7-7A1 1 0 0 1 1 6.586V2a1 1 0 0 1 1-1m0 5.586 7 7L13.586 9l-7-7H2z"></path>
+                        </svg>
+
+                    </li>
+                    <li class="para">
+                        <p><b>DAILY OFFERS </b></p>
+                        <p> Amet consectetur adipi elit loreme ipsum dolor sit.</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="card border-0">
+            <div class="card-body">
+                <ul class="d-flex justify-content-start list-unstyled">
+                    <li class="search-item pe-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-shield-plus" viewBox="0 0 16 16">
+                            <path d="M5.338 1.59a61 61 0 0 0-2.837.856.48.48 0 0 0-.328.39c-.554 4.157.726 7.19 2.253 9.188a10.7 10.7 0 0 0 2.287 2.233c.346.244.652.42.893.533q.18.085.293.118a1 1 0 0 0 .101.025 1 1 0 0 0 .1-.025q.114-.034.294-.118c.24-.113.547-.29.893-.533a10.7 10.7 0 0 0 2.287-2.233c1.527-1.997 2.807-5.031 2.253-9.188a.48.48 0 0 0-.328-.39c-.651-.213-1.75-.56-2.837-.855C9.552 1.29 8.531 1.067 8 1.067c-.53 0-1.552.223-2.662.524zM5.072.56C6.157.265 7.31 0 8 0s1.843.265 2.928.56c1.11.3 2.229.655 2.887.87a1.54 1.54 0 0 1 1.044 1.262c.596 4.477-.787 7.795-2.465 9.99a11.8 11.8 0 0 1-2.517 2.453 7 7 0 0 1-1.048.625c-.28.132-.581.24-.829.24s-.548-.108-.829-.24a7 7 0 0 1-1.048-.625 11.8 11.8 0 0 1-2.517-2.453C1.928 10.487.545 7.169 1.141 2.692A1.54 1.54 0 0 1 2.185 1.43 63 63 0 0 1 5.072.56"></path>
+                            <path d="M8 4.5a.5.5 0 0 1 .5.5v1.5H10a.5.5 0 0 1 0 1H8.5V9a.5.5 0 0 1-1 0V7.5H6a.5.5 0 0 1 0-1h1.5V5a.5.5 0 0 1 .5-.5"></path>
+                        </svg>
+
+                    </li>
+                    <li class="para">
+                        <p><b>100% SECURE PAYMENT </b></p>
+                        <p> Rem Lopsum dolor sit amet, consectetur adipi elit.</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container">
+        <div class="row">
+            <div class="display-header d-flex justify-content-between pb-1 ">
+                <h2 class="display-7 text-dark  text-uppercase">Mobile Products</h2>
+
+                <div class="btn-right">
+                    <a href="#" class="btn btn-medium btn-normal text-uppercase">Go to Shop</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="container d-flex justify-content-center align-center p-4 ">
+            <div class="mobile" id="mobile">
+                
+                <div class="card">
+                    <div class="image">
+                        <img src="./assets/images/Mobile5.jfif" class="image-fluid">
+                    </div>
+                    <div class="over  d-flex justify-content-center align-center px-3">
+                        <div class="cart p-2">
+                            <span>Add to Cart</span>
+                        </div>
+                        <div class="icon ">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16">
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="card-body d-flex justify-content-between">
+                        <p class="card-text">IPHONE 10 </p>
+                        <a class="cost" href="#">$980</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="image">
+                        <img src="./assets/images/Mobile3.jfif" class="image-fluid">
+                    </div>
+                    <div class="over  d-flex justify-content-center align-center px-3">
+                        <div class="cart p-2">
+                            <span>Add to Cart</span>
+                        </div>
+                        <div class="icon ">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16">
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="card-body d-flex justify-content-between">
+                        <p class="card-text">IPHONE 10 </p>
+                        <a class="cost" href="#">$980</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="image">
+                        <img src="./assets/images/Mobile7.jfif" class="image-fluid">
+                    </div>
+                    <div class="over  d-flex justify-content-center align-center px-3">
+                        <div class="cart p-2">
+                            <span>Add to Cart</span>
+                        </div>
+                        <div class="icon ">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16">
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="card-body d-flex justify-content-between">
+                        <p class="card-text">IPHONE 10 </p>
+                        <a class="cost" href="#">$980</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="image">
+                        <img src="./assets/images/Mobile8.jfif" class="image-fluid">
+                    </div>
+                    <div class="over  d-flex justify-content-center align-center px-3">
+                        <div class="cart p-2">
+                            <span>Add to Cart</span>
+                        </div>
+                        <div class="icon ">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16">
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="card-body d-flex justify-content-between">
+                        <p class="card-text">IPHONE 10 </p>
+                        <a class="cost" href="#">$980</a>
+                    </div>
+                </div>
+               
+                
+            </div>
+        </div>
+
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="display-header d-flex justify-content-between pb-1 ">
+                <h2 class="display-7 text-dark  text-uppercase">Smart Watches</h2>
+
+                <div class="btn-right">
+                    <a href="#" class="btn btn-medium btn-normal text-uppercase">Go to Shop</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="container d-flex justify-content-center align-center p-4 ">
+            <div class="mobile" id="watches">
+                
+                <div class="card">
+                    <div class="image">
+                        <img src="./assets/images/w5.jfif" class="image-fluid">
+                    </div>
+                    <div class="over  d-flex justify-content-center align-center px-3">
+                        <div class="cart p-2">
+                            <span>Add to Cart</span>
+                        </div>
+                        <div class="icon ">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16">
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="card-body d-flex justify-content-between">
+                        <p class="card-text">IPHONE 10 </p>
+                        <a class="cost" href="#">$980</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="image">
+                        <img src="./assets/images/w6.jpg" class="image-fluid">
+                    </div>
+                    <div class="over  d-flex justify-content-center align-center px-3">
+                        <div class="cart p-2">
+                            <span>Add to Cart</span>
+                        </div>
+                        <div class="icon ">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16">
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="card-body d-flex justify-content-between">
+                        <p class="card-text">IPHONE 10 </p>
+                        <a class="cost" href="#">$980</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="image">
+                        <img src="./assets/images/w7.jfif" class="image-fluid">
+                    </div>
+                    <div class="over  d-flex justify-content-center align-center px-3">
+                        <div class="cart p-2">
+                            <span>Add to Cart</span>
+                        </div>
+                        <div class="icon ">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16">
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="card-body d-flex justify-content-between">
+                        <p class="card-text">IPHONE 10 </p>
+                        <a class="cost" href="#">$980</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="image">
+                        <img src="./assets/images/w8.jpg" class="image-fluid">
+                    </div>
+                    <div class="over  d-flex justify-content-center align-center px-3">
+                        <div class="cart p-2">
+                            <span>Add to Cart</span>
+                        </div>
+                        <div class="icon ">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16">
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="card-body d-flex justify-content-between">
+                        <p class="card-text">IPHONE 10 </p>
+                        <a class="cost" href="#">$980</a>
+                    </div>
+                </div>
+               
+                
+            </div>
+        </div>
+
+    </div>
+
+    <section id="billboard" class="position-relative overflow-hidden bg-light-blue">
+        <div class="container-fluid bannerSection p-0">
+           
+                <div id="carouselExample" class="carousel slide">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="row d-flex  flex-wrap align-items-center">
+                                <div class="col-md-6 ">
+                                    <div class="text-content offset-4 padding-medium">
+                                        <h3>10% OFF</h3>
+                                        <h2 class="display-2 text-uppercase text-dark pb-5"> New Year Sale</h2>
+                                        <a href="#" class="btn btn-median btn-dark text-uppercase btn-rounded-none">Shop
+                                            Product</a>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="image-holder">
+                                        <div class="sale">
+                                        <img src="./assets/images/iphone.png"> 
+                                            
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+           
+        </div>
+    </section>
+
+    <div class="container">
+        <div class="row">
+            <div class="display-header d-flex justify-content-between pb-1 ">
+                <h2 class="display-7 text-dark  text-uppercase">Latest Posts</h2>
+                <div class="btn-right">
+                    <a href="#" class="btn btn-medium btn-normal text-uppercase">Read Blog</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="container d-flex justify-content-between  ">
+            <div class="mobile p-2" id="latestPost">  
+                <div class="col-lg-4 col-sm-12">       
+                <div class="card border-none ">
+                    <div class="image">
+                        <img src="./assets/images/post-item1.jpg" class="image-fluid">
+                    </div>
+                   
+                    <div class="card-body text-uppercase">
+                        <div class="card-meta text-muted">
+                            <span class="meta-data">Feb 22,2023</span>
+                            <span class="meta-categories">-Gadgets</span>
+                        </div>
+                        <h3 class="card-title">
+                            <a href="#">Get some cool Gadgets in 2023</a>
+                        </h3>
+                    </div>
+                </div>
+                </div>
+
+                <div class="col-lg-4 col-sm-12">       
+                    <div class="card border-none ">
+                        <div class="image">
+                            <img src="./assets/images/post-item2.jpg" class="image-fluid">
+                        </div>
+                       
+                        <div class="card-body text-uppercase">
+                            <div class="card-meta text-muted">
+                                <span class="meta-data">Feb 23,2023</span>
+                                <span class="meta-categories">-Technology</span>
+                            </div>
+                            <h3 class="card-title">
+                                <a href="#">Technology Hack You Won't Get</a>
+                            </h3>
+                        </div>
+                    </div>
+                    </div>
+               
+                    <div class="col-lg-4 col-sm-12">       
+                        <div class="card border-none ">
+                            <div class="image">
+                                <img src="./assets/images/post-item3.jpg" class="image-fluid">
+                            </div>
+                           
+                            <div class="card-body text-uppercase">
+                                <div class="card-meta text-muted">
+                                    <span class="meta-data">Feb 24,2023</span>
+                                    <span class="meta-categories">-Camera</span>
+                                </div>
+                                <h3 class="card-title">
+                                    <a href="#">Top 10 Small camera in the world</a>
+                                </h3>
+                            </div>
+                        </div>
+                        </div>
+               
+                
+            </div>
+        </div>
+
+
+       
+
+    </div>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">    
+     </script>
+    <!-- <script src="assets/js/bootsratp.js"></script> -->
+
+
+    
+
+
+</body>
